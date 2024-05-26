@@ -14,28 +14,45 @@
     </div>
 
     <header id="welcome-section">
-        <h1>Witam serdecznie</h1>
-        <h3>Nazywam się Michał</h3>
+        <h1>Witam serdecznie</h1><br><br>
+        <h3>Nazywam się Michał</h3><br><br>
+        <h4>Jestem początkującym programistą</h4>
     </header>
 
     <section id="projects">
         <div class="project-title">
-            <h2>Tutaj jest kilka z moich projektów</h2>
-            <a href="" target="_blank">Projekt 1</a>
-            <a href="" target="_blank">Projekt 2</a>
-            <a href="" target="_blank">Projekt 3</a>
+            <h2>Oto kilka z moich projektów</h2><br>
+            <a href="https://github.com/Cyc3l/Hotele" target="_blank">Projekt 1 Rezerwacja hoteli</a>
+            <a href="https://github.com/Cyc3l/Karta-Platnicza" target="_blank">Projekt 2 Własna karta płatnicza</a>
+            <a href="https://github.com/Cyc3l/Wojewodztwa" target="_blank">Projekt 3 Gra województwa Polski</a>
         </div>
     </section>
 
     <section id="profile-link">
-        <h2>W razie pytań proszę o kontakt</h2>
-        <h4>Oto kilka z moich komunikatorów</h4>
-        <a href="https://github.com/Cyc3l" target="_blank">Github</a>
-        <a href="https://www.facebook.com/profile.php?id=100031090267218&locale=pl_PL" target="_blank">Facebook</a>
+        <h1>W razie pytań proszę o kontakt</h1><br><br>
+        <h3>Oto kilka z moich komunikatorów</h3><br><br>
+        <div id="profile-link-href">
+            <a href="https://github.com/Cyc3l" target="_blank">Github</a>
+            <a href="https://www.facebook.com/profile.php?id=100031090267218&locale=pl_PL" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/__cycuu__/" target="_blank">Instagram</a>
+        </div>
     </section>
+
     <footer>
         <p>Numer telefonu: 000 000 000</p>
         <p>Adres email: xyz@xyz.xyz</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('#navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
